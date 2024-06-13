@@ -1,0 +1,166 @@
+@charset "UTF-8";
+
+body {
+	background-color: #E7E7E7;
+}
+
+.container {
+	width: 886px;
+	height: auto;
+	border: 1px solid black;
+	margin: 0 auto;
+}
+
+.preHeader {
+	background: url(../images/preheader.jpg);
+	width: 886px;
+	height: 71px;
+}
+
+.header {
+	background: url(../images/header.jpg);
+	width: 886px;
+	height: 78px;
+}
+
+.header h3 {
+	color: white;
+	margin: 0;
+	padding-left: 80px;
+	margin: 0;
+}
+
+.menu {
+	background: url(../images/menu.jpg);
+	width: 886px;
+	height: 32px;
+}
+
+.menu a {
+	text-decoration: none;
+	color: white;
+	padding-left: 78px;
+	font-weight: bold;
+	line-height: 32px;
+}
+
+.main {
+	display: flex;
+	background: url(../images/bg.jpg);
+	width: 886px;
+	/*height: 600px;*/
+	height: auto;
+}
+
+.image img {
+	width: 500px;
+	height: auto;
+	padding-bottom: 20px;
+	margin-left: auto;
+}
+
+.left {
+	width: 70%;
+	height: 600px;
+	height: auto; padding-left : 80px;
+	padding-right: 10px;
+	padding-top: 16px;
+	padding-left: 80px;
+	border-right: 2px dotted;
+}
+
+.title {
+	font-size: 18px;
+	color: black;
+	font-weight: bold;
+	padding-bottom: 16px;
+}
+
+.description {
+	font-size: 16px;
+	color: black;
+	padding-bottom: 16px;
+	border-bottom: 1px solid black;
+	font-family: sans-serif;
+}
+
+.infomation {
+	float: right;
+	color: black;
+	font-size: 16px;
+	font-family: sans-serif;
+	margin-top: 6px;
+}
+
+.right {
+	width: 30%;
+	height: 600px;
+	height: auto;
+	padding-left: 10px;
+	padding-right: 74px;
+}
+
+.new {
+	color: black;
+	font-size: 18px;
+	font-weight: bold;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	font-family: sans-serif;
+}
+.newR {
+	margin-bottom:10px; 
+}
+
+.iputText {
+	border: dashed 1px;
+	width: 150px;
+}
+
+.submitTxt {
+	border: none;
+	background-color: transparent;
+	font-weight: bold;
+	color: #999999;
+	margin-bottom: 10px;
+}
+
+.list a {
+	margin-top: 10px;
+	color: black;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+.contentNews {
+	font-size: 13px;
+	color: black;
+	margin-bottom: 10px;
+}
+.icon1{
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    background-image: url(../images/comment.gif);
+    background-repeat: no-repeat;
+}
+.signature
+{
+    float:right;
+    color: #42554e;
+    font-size: 10px;
+    margin-top: 5px;
+}
+.icon2{
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    background-image: url(../images/timeicon.gif);
+    background-repeat: no-repeat;
+}
+
+.footer {
+	background: url(../images/footer.jpg);
+	width: 886px;
+	height: 78px;
+}
