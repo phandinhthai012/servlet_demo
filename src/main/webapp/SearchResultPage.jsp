@@ -6,8 +6,8 @@
 <head>
 <meta charset="UTF-8" content="text/html" http-equiv="Content-Type">
 <title>SearchResultPage</title>
-<link rel="stylesheet" type="text/css" href="css/style2.css"/>
-<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="css/style2.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
 
 </head>
 <body>
@@ -21,30 +21,35 @@
 		</div>
 		<div class="main">
 			<div class="left">
-				<c:forEach begin="1" end="3">
+				<c:forEach items="${listSearch}" var ="x">
 					<div class="title">
-						<a href="#"> Day La Bai So 2 </a>
+						<a href="detail?id=${x.id}"> ${x.title}</a>
 					</div>
 					<div class="image">
-						<img src="images/i1.jpg" alt="" />
+						<img src="images/${x.image}" alt="" />
 					</div>
-					<div class="description">Lorem ipsum dolor sit amet,
-						consectetuer adipiscing elit, sed diam nonummy nibh euismod
-						tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-						enim ad minim veniam, quis nostrud exerci tation ullamcorper
-						suscipit lobortis nisl ut aliquip ex ea commodo consequat. nisl ut
-						aliquip ex ea commodo consequat. quis nostrud exerci tation
-						ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-						consequat. quis nostrud exerci tation ullamcorper suscipit
-						lobortis</div>
+					<div class="description"> ${x.shortDes}</div>
 				</c:forEach>
 				<div class="paging">
+					<c:if test="${maxPage < 1}">
+						<h3>Not Found !!</h3>
+					</c:if>
+					<c:if test="${maxPage >= 1}">
+						<c:forEach begin="1" end="${maxPage}" var="i">
+							<a class="${i==index?"active":""}" href="SearchControl?index=${i}&txtSearch=${txt}">${i}</a>
+						</c:forEach>
+					</c:if>
+				</div>
+			<%-- This is JSP comment
+			<div class="paging">
 					<c:if test="${3 > 1}">
 						<c:forEach begin="1" end="3" var="i">
 							<a href="#">${i}</a>
 						</c:forEach>
 					</c:if>
-				</div>
+				</div> --%>
+				
+
 			</div>
 			<div class="right">
 				<div class="new">Digital news</div>

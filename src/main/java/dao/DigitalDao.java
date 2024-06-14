@@ -86,4 +86,24 @@ public class DigitalDao {
 		}
 		return null;
 	}
+	public int  count(String txt) {
+		String sql = "select count(e) from Digital e where e.title like :txt";
+		TypedQuery<Long> query = em.createQuery(sql, Long.class);
+		query.setParameter("txt", "%"+txt+"%");
+		if (query.getSingleResult() == null) {
+			return 0;
+		}
+		return query.getSingleResult().intValue();
+	}
+	public  List<Digital> search(String txt, int pageIndex) {
+		String query = "select id from (select ROW_NUMBER() over (order by id asc) as r, * from digital where title like :txt)as x where r between :index*3 -2 and :index *3";
+		@SuppressWarnings("unchecked")
+		List<Integer> list = em.createNativeQuery(query).setParameter("txt", "%"+txt+"%").setParameter("index", pageIndex).getResultList();
+		List<Digital> listD = new ArrayList<Digital>();
+		for (Integer id : list) {
+			Digital d = getOne(id);
+			listD.add(d);
+		}
+		return listD;
+	}
 }

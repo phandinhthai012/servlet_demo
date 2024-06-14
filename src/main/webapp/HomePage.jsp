@@ -30,16 +30,18 @@
 					<div class="icon1"></div>
 					<div class="icon2"></div>
 				</div>
-				<div class="infomation">${t.top1.author}| ${t.top1.timePost}</div>
+				<div class="infomation">${t.top1.author}|${t.top1.timePost}</div>
 			</div>
 			<div class="right">
 				<div class="new">Digital news</div>
 				<div class="contentNews">${t.top1.shortDes}</div>
 				<div class="newR">Search</div>
 				<div class="search">
-					<input type="text" name="txtSearch" placeholder="search here"
-						class="iputText"> <input class="submitTxt" type="submit"
-						value="go">
+				<form action="SearchControl" method="post">
+					<input type="text" name="txtSearch" placeholder="search here" class="iputText"> 
+					<input class="submitTxt" type="submit" value="go">
+				</form>
+					
 				</div>
 				<div class="newR">Last Articles</div>
 				<c:forEach items="${t.top5}" var="i">
