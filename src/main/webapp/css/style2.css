@@ -1,0 +1,12 @@
+@charset "UTF-8";
+.paging {
+	margin-top: 40px;
+	text-align: center;
+}
+
+.paging a {
+	text-decoration: none;
+	border-radius: 5px;
+	padding: 2px;
+	border: 1px solid;
+}

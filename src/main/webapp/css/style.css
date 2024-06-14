@@ -62,7 +62,8 @@ body {
 .left {
 	width: 70%;
 	height: 600px;
-	height: auto; padding-left : 80px;
+	height: auto;
+	padding-left: 80px;
 	padding-right: 10px;
 	padding-top: 16px;
 	padding-left: 80px;
@@ -108,8 +109,9 @@ body {
 	padding-bottom: 16px;
 	font-family: sans-serif;
 }
+
 .newR {
-	margin-bottom:10px; 
+	margin-bottom: 10px;
 }
 
 .iputText {
@@ -137,30 +139,44 @@ body {
 	color: black;
 	margin-bottom: 10px;
 }
-.icon1{
-    height: 10px;
-    width: 10px;
-    display: inline-block;
-    background-image: url(../images/comment.gif);
-    background-repeat: no-repeat;
+
+.icon1 {
+	height: 10px;
+	width: 10px;
+	display: inline-block;
+	background-image: url(../images/comment.gif);
+	background-repeat: no-repeat;
 }
-.signature
-{
-    float:right;
-    color: #42554e;
-    font-size: 10px;
-    margin-top: 5px;
+
+.signature {
+	float: right;
+	color: #42554e;
+	font-size: 10px;
+	margin-top: 5px;
 }
-.icon2{
-    height: 10px;
-    width: 10px;
-    display: inline-block;
-    background-image: url(../images/timeicon.gif);
-    background-repeat: no-repeat;
+
+.icon2 {
+	height: 10px;
+	width: 10px;
+	display: inline-block;
+	background-image: url(../images/timeicon.gif);
+	background-repeat: no-repeat;
 }
 
 .footer {
 	background: url(../images/footer.jpg);
 	width: 886px;
 	height: 78px;
+}
+
+.main.left.paging {
+	margin-top: 40px;
+	text-align: center;
+}
+
+.main.left.paging a {
+	text-decoration: none;
+	border-radius: 5px;
+	padding: 2px;
+	border: 1px solid;
 }
