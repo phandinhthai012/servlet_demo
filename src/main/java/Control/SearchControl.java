@@ -32,10 +32,12 @@ public class SearchControl extends HttpServlet {
 				maxPage++;
 			}
 			List<Digital> listSearch = new DigitalDao().search(search, index);
+			List<Digital> top5 = new DigitalDao().getTop5();
 			req.setAttribute("listSearch", listSearch);
 			req.setAttribute("maxPage", maxPage);
 			req.setAttribute("index", index);
 			req.setAttribute("txtSearch", search);
+			req.setAttribute("top5", top5);
 			req.getRequestDispatcher("SearchResultPage.jsp").forward(req, resp);
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -37,9 +37,12 @@
 				<div class="contentNews">${one.shortDes}</div>
 				<div class="newR">Search</div>
 				<div class="search">
-					<input type="text" name="txtSearch" placeholder="search here"
-						class="iputText"> <input class="submitTxt" type="submit"
-						value="go">
+					<form action="SearchControl" method="post">
+						<input type="text" name="txtSearch" placeholder="search here"
+							class="iputText"> <input class="submitTxt" type="submit"
+							value="go">
+					</form>
+					
 				</div>
 				<div class="newR">Last Articles</div>
 				<c:forEach items="${top5}" var="i">
